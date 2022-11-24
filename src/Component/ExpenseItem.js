@@ -1,15 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const ExpenseItem = () => {
+const ExpenseItem = (props) => {
   return (
     <div>
-    <div><h2>ExpenseItem !</h2>
-    <h3>Food Rs 10</h3>
-    <h3>petrol Rs 100</h3>
-    <h3>movies Rs 200</h3>
+      <div>
+        <h1>{props.id}</h1>
+       <h2>{props.date.toISOString()}</h2>
+       <h2>{props.title}</h2>
+       <h2>${props.amount}</h2>
+       <h2>{props.location}</h2>
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default ExpenseItem
+export default ExpenseItem;
